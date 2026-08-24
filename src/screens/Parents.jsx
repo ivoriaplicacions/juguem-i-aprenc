@@ -3,7 +3,7 @@ import { useLang } from '../i18n'
 import { AREAS, ALL_ACTS } from '../data/curriculum'
 import { BigBtn, IconBtn } from '../ui/kit'
 import { reset as wipe } from '../lib/store'
-import { vocesDe, speak } from '../lib/speech'
+import { vocesDe, speak, usarVelocidad, VELOCIDADES } from '../lib/speech'
 
 /* Puerta para adultos: una suma sencilla que un niño de 4-5 años todavía
    no resuelve. Evita que entre solo a los ajustes sin poner contraseñas. */
@@ -169,6 +169,25 @@ export default function Parents({ state, setState, onBack }) {
           <Voces lang="ca" titulo={tx({ es: 'En catalán', ca: 'En català' })}
                  elegida={state.voz?.ca}
                  onElegir={uri => setState(s => ({ ...s, voz: { ...s.voz, ca: uri } }))} />
+
+          <b>{tx({ es: 'Velocidad', ca: 'Velocitat' })}</b>
+          <div className="row" style={{ marginTop: 8 }}>
+            {VELOCIDADES.map(v => (
+              <button key={v.id} className={`pill ${state.velocidad === v.id ? 'on' : ''}`}
+                onClick={() => {
+                  setState(s => ({ ...s, velocidad: v.id }))
+                  // Se aplica ya para que la frase de prueba suene a la nueva velocidad.
+                  usarVelocidad(v.id)
+                  speak(PRUEBA[lang], lang, { interrumpe: true })
+                }}>
+                {v.emoji} {tx({ es: v.es, ca: v.ca })}
+              </button>
+            ))}
+          </div>
+          <p style={{ color: 'var(--muted)', fontSize: 14, margin: '10px 0 0' }}>
+            {tx({ es: 'A un niño de 4 o 5 años le hace falta bastante más despacio de lo que a un adulto le parece normal.',
+                  ca: 'Un nen de 4 o 5 anys necessita bastant més a poc a poc del que a un adult li sembla normal.' })}
+          </p>
 
           <h3 style={{ marginTop: 18 }}>{t('childName')}</h3>
           <input className="field" value={state.name} maxLength={14}

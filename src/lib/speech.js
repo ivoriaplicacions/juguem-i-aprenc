@@ -33,8 +33,20 @@ const NOVEDAD = new Set([
 /* Las variantes de alta calidad se anuncian en el nombre. */
 const BUENA = /enhanced|premium|neural|siri|natural|mejorada|millorada/i
 
+/* Velocidad base. A un niño de 4-5 años le da tiempo a seguir una
+   consigna bastante más despacio de lo que suena "natural" para un
+   adulto, y cada voz tiene su propio ritmo, así que la familia puede
+   ajustarla desde su panel. */
+export const VELOCIDADES = [
+  { id: 'lenta',  valor: 0.62, emoji: '🐢', es: 'Muy despacio', ca: 'Molt a poc a poc' },
+  { id: 'media',  valor: 0.75, emoji: '🚶', es: 'Despacio',     ca: 'A poc a poc' },
+  { id: 'rapida', valor: 0.92, emoji: '🐇', es: 'Normal',       ca: 'Normal' }
+]
+export const VELOCIDAD_POR_DEFECTO = 'media'
+
 let voces = []
 let preferida = { es: null, ca: null }   // voiceURI elegido por la familia
+let velocidad = VELOCIDADES.find(v => v.id === VELOCIDAD_POR_DEFECTO).valor
 const cola = []                          // frases esperando a que haya voces
 let vigilante = null
 
@@ -94,6 +106,12 @@ export function usarVoz(lang, voiceURI) {
   preferida = { ...preferida, [lang]: voiceURI || null }
 }
 
+/** Fija la velocidad base a partir del id elegido en el panel de familias. */
+export function usarVelocidad(id) {
+  const v = VELOCIDADES.find(x => x.id === id)
+  if (v) velocidad = v.valor
+}
+
 /* ---------- que no se corte sola ---------- */
 
 /* Chrome deja de hablar solo si una frase pasa de unos segundos.
@@ -114,9 +132,14 @@ function vigilar() {
  * hubiera y habla ya: es lo que quiere una consigna nueva.
  * Con `{ voz }` se fuerza una voz concreta sin cambiar la preferencia,
  * que es lo que necesita el botón de probar del panel de familias.
+ *
+ * `factor` multiplica la velocidad base: una actividad que quiera ir aún
+ * más despacio pide `{ factor: 0.88 }` y sigue respetando lo que la
+ * familia haya elegido, en vez de imponer un número suelto.
  */
 export function speak(text, lang = 'es', opciones = {}) {
-  const { rate = 0.92, pitch = 1.1, interrumpe = false, voz = null } = opciones
+  const { factor = 1, pitch = 1.1, interrumpe = false, voz = null } = opciones
+  const rate = Math.max(0.1, Math.min(2, velocidad * factor))
   if (!text || !hay()) return
 
   // Todavía no hay lista de voces: se guarda y sale al llegar.

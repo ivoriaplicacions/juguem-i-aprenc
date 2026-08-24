@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { LangCtx, makeT } from './i18n'
 import { load, save } from './lib/store'
 import { unlockAudio } from './lib/sound'
-import { unlockSpeech, usarVoz } from './lib/speech'
+import { unlockSpeech, usarVoz, usarVelocidad } from './lib/speech'
 import Home from './screens/Home'
 import World from './screens/World'
 import Play from './screens/Play'
@@ -28,11 +28,13 @@ export default function App() {
     return () => window.removeEventListener('pointerdown', go)
   }, [])
 
-  // La voz que haya elegido la familia para cada lengua.
+  // La voz y la velocidad que haya elegido la familia.
   useEffect(() => {
     usarVoz('es', state.voz?.es)
     usarVoz('ca', state.voz?.ca)
   }, [state.voz])
+
+  useEffect(() => { usarVelocidad(state.velocidad) }, [state.velocidad])
 
   const ctx = useMemo(() => ({ lang: state.lang, ...makeT(state.lang) }), [state.lang])
 

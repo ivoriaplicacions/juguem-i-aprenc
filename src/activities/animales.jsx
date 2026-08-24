@@ -53,7 +53,7 @@ export default function Animales({ onDone }) {
   /** Reproduce el sonido del animal y, justo después, su onomatopeya hablada. */
   const sonar = () => {
     sfx.animal(r.target.n)
-    setTimeout(() => speak(tx(r.target.onoma), lang, { rate: 0.8, pitch: 1.35 }), 620)
+    setTimeout(() => speak(tx(r.target.onoma), lang, { factor: 0.88, pitch: 1.35 }), 620)
   }
 
   // Al entrar en cada ronda suena solo, después de que se lea la consigna.

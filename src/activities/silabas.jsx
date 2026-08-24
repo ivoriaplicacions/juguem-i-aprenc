@@ -38,7 +38,7 @@ export default function Silabas({ onDone }) {
   const palmear = () => {
     setPalmas(0)
     silabas.forEach((s, k) => setTimeout(() => {
-      sfx.drum(); setPalmas(k + 1); speak(s, lang, { rate: 0.8 })
+      sfx.drum(); setPalmas(k + 1); speak(s, lang, { factor: 0.88 })
     }, k * 620))
   }
 

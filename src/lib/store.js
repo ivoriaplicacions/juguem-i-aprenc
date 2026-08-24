@@ -4,7 +4,9 @@ const EMPTY = {
   lang: 'es', name: '', stars: 0, done: {}, plays: {},
   minutes: 0, lastDay: null, dailyMin: 0,
   // Voz elegida por la familia para cada lengua (voiceURI). null = automática.
-  voz: { es: null, ca: null }
+  voz: { es: null, ca: null },
+  // Velocidad del habla: un id de VELOCIDADES en lib/speech.js.
+  velocidad: 'media'
 }
 
 export function load() {

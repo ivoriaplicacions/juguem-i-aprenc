@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLang } from '../i18n'
 import { AREAS, ALL_ACTS } from '../data/curriculum'
 import { BigBtn, IconBtn } from '../ui/kit'
 import { reset as wipe } from '../lib/store'
+import { vocesDe, speak } from '../lib/speech'
 
 /* Puerta para adultos: una suma sencilla que un niño de 4-5 años todavía
    no resuelve. Evita que entre solo a los ajustes sin poner contraseñas. */
@@ -35,6 +36,70 @@ const TIPS = [
   { es: 'Alterna mundos. Si sólo repite uno, propón tú otro para cubrir todas las áreas.', ca: 'Alterna mons. Si només en repeteix un, proposa-li\'n un altre per cobrir totes les àrees.' },
   { es: 'Las actividades de movimiento y respiración están pensadas para hacerlas juntos.', ca: 'Les activitats de moviment i respiració estan pensades per fer-les junts.' }
 ]
+
+/* Frase de prueba: corta, con la entonación de una consigna real. */
+const PRUEBA = {
+  es: 'Hola, vamos a jugar. Toca el color rojo.',
+  ca: 'Hola, anem a jugar. Toca el color vermell.'
+}
+
+/**
+ * Elegir la voz de cada lengua. Las voces instaladas cambian de un
+ * aparato a otro, así que la lista se lee del sistema. El juego ya
+ * escoge la mejor por su cuenta; esto es para cuando en casa
+ * prefieren otra, o cuando la automática no convence.
+ */
+function Voces({ lang, titulo, elegida, onElegir }) {
+  const [lista, setLista] = useState(() => vocesDe(lang))
+
+  // Al abrir el panel puede que el navegador aún no haya cargado las voces.
+  useEffect(() => {
+    if (lista.length) return
+    const id = setInterval(() => {
+      const v = vocesDe(lang)
+      if (v.length) { setLista(v); clearInterval(id) }
+    }, 400)
+    const fin = setTimeout(() => clearInterval(id), 4000)
+    return () => { clearInterval(id); clearTimeout(fin) }
+  }, [lang, lista.length])
+
+  const probar = (uri) => {
+    const v = lista.find(x => x.voiceURI === uri)
+    speak(PRUEBA[lang], lang, { interrumpe: true, voz: v })
+  }
+
+  if (!lista.length) {
+    return (
+      <div style={{ marginBottom: 16 }}>
+        <b>{titulo}</b>
+        <p style={{ color: 'var(--muted)', fontSize: 14, margin: '6px 0 0' }}>
+          {lang === 'ca'
+            ? 'Aquest aparell no té cap veu en català instal·lada. Es pot afegir a Configuració del sistema, a Accessibilitat › Contingut parlat.'
+            : 'Este aparato no tiene ninguna voz en castellano instalada. Se puede añadir en Ajustes del sistema, en Accesibilidad › Contenido hablado.'}
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{ marginBottom: 18 }}>
+      <b>{titulo}</b>
+      <div className="row" style={{ marginTop: 8, alignItems: 'center' }}>
+        <select className="field" style={{ flex: 1, minWidth: 180 }}
+                value={elegida || ''}
+                onChange={e => { const uri = e.target.value || null; onElegir(uri); if (uri) probar(uri) }}>
+          <option value="">
+            {lang === 'ca' ? `Automàtica (${lista[0].name})` : `Automática (${lista[0].name})`}
+          </option>
+          {lista.map(v => <option key={v.voiceURI} value={v.voiceURI}>{v.name}</option>)}
+        </select>
+        <BigBtn variant="ghost" onClick={() => probar(elegida)}>
+          🔊 {lang === 'ca' ? 'Provar' : 'Probar'}
+        </BigBtn>
+      </div>
+    </div>
+  )
+}
 
 export default function Parents({ state, setState, onBack }) {
   const { lang, t, tx } = useLang()
@@ -93,6 +158,18 @@ export default function Parents({ state, setState, onBack }) {
               </button>
             ))}
           </div>
+          <h3 style={{ marginTop: 22 }}>{tx({ es: 'Voz', ca: 'Veu' })}</h3>
+          <p style={{ color: 'var(--muted)', fontSize: 14, margin: '0 0 12px' }}>
+            {tx({ es: 'El juego elige sola la mejor voz de cada lengua. Si en casa preferís otra, cambiadla aquí.',
+                  ca: 'El joc tria sol la millor veu de cada llengua. Si a casa en preferiu una altra, canvieu-la aquí.' })}
+          </p>
+          <Voces lang="es" titulo={tx({ es: 'En castellano', ca: 'En castellà' })}
+                 elegida={state.voz?.es}
+                 onElegir={uri => setState(s => ({ ...s, voz: { ...s.voz, es: uri } }))} />
+          <Voces lang="ca" titulo={tx({ es: 'En catalán', ca: 'En català' })}
+                 elegida={state.voz?.ca}
+                 onElegir={uri => setState(s => ({ ...s, voz: { ...s.voz, ca: uri } }))} />
+
           <h3 style={{ marginTop: 18 }}>{t('childName')}</h3>
           <input className="field" value={state.name} maxLength={14}
                  onChange={e => setState(s => ({ ...s, name: e.target.value }))} />

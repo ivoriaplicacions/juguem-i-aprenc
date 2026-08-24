@@ -16,7 +16,8 @@ export const BigBtn = ({ children, onClick, variant = '', style }) => (
 /** Habla un texto {es,ca} y lo repite al tocar el altavoz. */
 export function Prompt({ text, extra, auto = true }) {
   const { lang, tx } = useLang()
-  const say = () => speak(tx(text), lang)
+  // La consigna manda: calla lo que hubiera sonando y habla ya.
+  const say = () => speak(tx(text), lang, { interrumpe: true })
   useEffect(() => { if (auto) { const id = setTimeout(say, 320); return () => clearTimeout(id) } },
     [tx(text), lang]) // eslint-disable-line
   return (

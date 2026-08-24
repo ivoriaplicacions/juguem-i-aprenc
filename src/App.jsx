@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { LangCtx, makeT } from './i18n'
 import { load, save } from './lib/store'
 import { unlockAudio } from './lib/sound'
+import { unlockSpeech, usarVoz } from './lib/speech'
 import Home from './screens/Home'
 import World from './screens/World'
 import Play from './screens/Play'
@@ -20,12 +21,18 @@ export default function App() {
     return () => clearInterval(id)
   }, [])
 
-  // El audio del navegador necesita un primer gesto del usuario.
+  // El audio y la voz del navegador necesitan un primer gesto del usuario.
   useEffect(() => {
-    const go = () => { unlockAudio(); window.removeEventListener('pointerdown', go) }
+    const go = () => { unlockAudio(); unlockSpeech(); window.removeEventListener('pointerdown', go) }
     window.addEventListener('pointerdown', go)
     return () => window.removeEventListener('pointerdown', go)
   }, [])
+
+  // La voz que haya elegido la familia para cada lengua.
+  useEffect(() => {
+    usarVoz('es', state.voz?.es)
+    usarVoz('ca', state.voz?.ca)
+  }, [state.voz])
 
   const ctx = useMemo(() => ({ lang: state.lang, ...makeT(state.lang) }), [state.lang])
 

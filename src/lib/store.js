@@ -1,6 +1,11 @@
 /* Progreso local del niño. Nada sale del dispositivo: sin cuentas, sin red. */
 const KEY = 'juguem.v1'
-const EMPTY = { lang: 'es', name: '', stars: 0, done: {}, plays: {}, minutes: 0, lastDay: null, dailyMin: 0 }
+const EMPTY = {
+  lang: 'es', name: '', stars: 0, done: {}, plays: {},
+  minutes: 0, lastDay: null, dailyMin: 0,
+  // Voz elegida por la familia para cada lengua (voiceURI). null = automática.
+  voz: { es: null, ca: null }
+}
 
 export function load() {
   try { return { ...EMPTY, ...JSON.parse(localStorage.getItem(KEY) || '{}') } }

@@ -6,7 +6,8 @@
   "description": "Juego educativo multiplataforma para niños de 4 y 5 años",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "comprobar": "node scripts/comprobar-dibujos.mjs",
+    "build": "npm run comprobar && vite build",
     "preview": "vite preview --host",
     "cap:add:android": "npx cap add android",
     "cap:add:ios": "npx cap add ios",

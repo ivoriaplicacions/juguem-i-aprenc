@@ -22,6 +22,11 @@ import vocabulario from './vocabulario'
 import sonidoinicial from './sonidoinicial'
 import letras from './letras'
 import silabas from './silabas'
+import primeraletra from './primeraletra'
+import acciones from './acciones'
+import adivinanza from './adivinanza'
+import contrarios from './contrarios'
+import quepasadespues from './quepasadespues'
 import emociones from './emociones'
 import situaciones from './situaciones'
 import calma from './calma'
@@ -44,6 +49,7 @@ export const ACTIVITIES = {
   contar, sumar, tamanos, clasificar,
   restar, masmenos, numerocantidad, quefalta, ordenar,
   vocabulario, sonidoinicial, letras, silabas,
+  primeraletra, acciones, adivinanza, contrarios, quepasadespues,
   emociones, situaciones, calma,
   animales, habitats, rutinas, tiempo,
   cuerpo, muevete, higiene, seguridad,

@@ -62,7 +62,12 @@ export const WORLDS = [
       { id: 'vocabulario',  emoji: '🗣️', es: '¿Qué es esto?',   ca: 'Què és això?',     esH: 'Ampliar vocabulario', caH: 'Ampliar vocabulari', areas: ['lenguaje'] },
       { id: 'sonidoinicial',emoji: '👂', es: 'Suena igual',     ca: 'Sona igual',       esH: 'Conciencia fonológica', caH: 'Consciència fonològica', areas: ['prelectura', 'lenguaje'] },
       { id: 'letras',       emoji: '🔠', es: 'Caza la letra',   ca: 'Caça la lletra',   esH: 'Reconocer letras', caH: 'Reconèixer lletres', areas: ['prelectura'] },
-      { id: 'silabas',      emoji: '👏', es: 'Palmas y sílabas',ca: 'Picades i síl·labes', esH: 'Segmentar palabras', caH: 'Segmentar paraules', areas: ['prelectura', 'lenguaje'] }
+      { id: 'silabas',      emoji: '👏', es: 'Palmas y sílabas',ca: 'Picades i síl·labes', esH: 'Segmentar palabras', caH: 'Segmentar paraules', areas: ['prelectura', 'lenguaje'] },
+      { id: 'primeraletra',   emoji: '🅰️', es: '¿Con qué letra empieza?', ca: 'Amb quina lletra comença?', esH: 'Del dibujo a la letra', caH: 'Del dibuix a la lletra', areas: ['prelectura', 'lenguaje'] },
+      { id: 'acciones',       emoji: '🏃', es: '¿Qué está haciendo?', ca: 'Què està fent?',   esH: 'Los verbos', caH: 'Els verbs', areas: ['lenguaje'] },
+      { id: 'adivinanza',     emoji: '🔮', es: 'Adivina qué es',     ca: 'Endevina què és',   esH: 'Escuchar una pista y deducir', caH: 'Escoltar una pista i deduir', areas: ['lenguaje', 'memoria'] },
+      { id: 'contrarios',     emoji: '↔️', es: 'Lo contrario',       ca: 'El contrari',       esH: 'Parejas de opuestos', caH: 'Parelles d\'oposats', areas: ['lenguaje', 'percepcion'] },
+      { id: 'quepasadespues', emoji: '➡️', es: '¿Y después qué pasa?', ca: 'I després què passa?', esH: 'Causa y consecuencia', caH: 'Causa i conseqüència', areas: ['lenguaje', 'entorno'] }
     ]
   },
   {

@@ -77,7 +77,12 @@ export const WORLDS = [
     acts: [
       { id: 'emociones',  emoji: '😊', es: '¿Cómo se siente?', ca: 'Com se sent?',    esH: 'Identificar emociones', caH: 'Identificar emocions', areas: ['emocional', 'lenguaje'] },
       { id: 'situaciones',emoji: '🤝', es: '¿Qué hacemos?',    ca: 'Què fem?',        esH: 'Convivencia y empatía', caH: 'Convivència i empatia', areas: ['social', 'emocional'] },
-      { id: 'calma',      emoji: '🫧', es: 'Respira conmigo',  ca: 'Respira amb mi',  esH: 'Autorregulación y calma', caH: 'Autoregulació i calma', areas: ['emocional', 'autonomia'] }
+      { id: 'calma',      emoji: '🫧', es: 'Respira conmigo',  ca: 'Respira amb mi',  esH: 'Autorregulación y calma', caH: 'Autoregulació i calma', areas: ['emocional', 'autonomia'] },
+      { id: 'caradelotro',    emoji: '🪞', es: '¿Cómo se siente el otro?', ca: 'Com se sent l\'altre?', esH: 'Ponerse en su lugar', caH: 'Posar-se al seu lloc', areas: ['emocional', 'social'] },
+      { id: 'calmarse',       emoji: '🧘', es: '¿Qué me ayuda a calmarme?', ca: 'Què m\'ajuda a calmar-me?', esH: 'Salidas para el enfado', caH: 'Sortides per a l\'enfada', areas: ['emocional', 'autonomia'] },
+      { id: 'necesita',       emoji: '🤲', es: '¿Qué necesita?',   ca: 'Què necessita?',    esH: 'Darse cuenta y cuidar', caH: 'Adonar-se\'n i cuidar', areas: ['emocional', 'social'] },
+      { id: 'palabrasmagicas',emoji: '✨', es: 'Las palabras mágicas', ca: 'Les paraules màgiques', esH: 'Hola, gracias, por favor, perdón', caH: 'Hola, gràcies, si us plau, perdó', areas: ['social', 'lenguaje'] },
+      { id: 'micuerpoavisa',  emoji: '🫀', es: 'Mi cuerpo me avisa', ca: 'El meu cos m\'avisa', esH: 'Leer las señales del cuerpo', caH: 'Llegir els senyals del cos', areas: ['emocional', 'autonomia'] }
     ]
   },
   {

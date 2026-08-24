@@ -30,6 +30,11 @@ import quepasadespues from './quepasadespues'
 import emociones from './emociones'
 import situaciones from './situaciones'
 import calma from './calma'
+import caradelotro from './caradelotro'
+import calmarse from './calmarse'
+import necesita from './necesita'
+import palabrasmagicas from './palabrasmagicas'
+import micuerpoavisa from './micuerpoavisa'
 import animales from './animales'
 import habitats from './habitats'
 import rutinas from './rutinas'
@@ -51,6 +56,7 @@ export const ACTIVITIES = {
   vocabulario, sonidoinicial, letras, silabas,
   primeraletra, acciones, adivinanza, contrarios, quepasadespues,
   emociones, situaciones, calma,
+  caradelotro, calmarse, necesita, palabrasmagicas, micuerpoavisa,
   animales, habitats, rutinas, tiempo,
   cuerpo, muevete, higiene, seguridad,
   dibujar, trazos, ritmo, memoria

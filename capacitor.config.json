@@ -1,0 +1,11 @@
+{
+  "appId": "cat.ivori.juguemiaprenc",
+  "appName": "Juguem i Aprenc",
+  "webDir": "dist",
+  "backgroundColor": "#fff8ec",
+  "android": { "allowMixedContent": false },
+  "ios": { "contentInset": "always" },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#ffd166" }
+  }
+}

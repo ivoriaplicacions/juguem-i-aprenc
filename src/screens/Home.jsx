@@ -5,9 +5,16 @@ import { IconBtn } from '../ui/kit'
 import { sfx } from '../lib/sound'
 import { speak } from '../lib/speech'
 
+/* Las dos lenguas del juego. Se dice cada una en su propia voz al elegirla,
+   para que el niño sepa qué ha tocado sin necesidad de leer. */
+const LANGS = [
+  { id: 'es', label: 'ES', name: 'Castellano' },
+  { id: 'ca', label: 'CA', name: 'Català' }
+]
+
 /* Portada: los siete mundos. Cada tarjeta enseña cuánto se ha completado,
    sin números ni notas: sólo una barra que se llena. */
-export default function Home({ state, onWorld, onParents }) {
+export default function Home({ state, onWorld, onParents, onLang }) {
   const { lang, t, tx } = useLang()
   const doneIn = (w) => w.acts.filter(a => state.done[a.id]).length
 
@@ -20,6 +27,15 @@ export default function Home({ state, onWorld, onParents }) {
           <p className="subtitle">{t('chooseWorld')}</p>
         </div>
         <div className="spacer" />
+        <div className="langpick" role="group" aria-label={t('language')}>
+          {LANGS.map(l => (
+            <button key={l.id} className={lang === l.id ? 'on' : ''}
+              aria-label={l.name} aria-pressed={lang === l.id}
+              onClick={() => { sfx.tap(); onLang(l.id); speak(l.name, l.id) }}>
+              {l.label}
+            </button>
+          ))}
+        </div>
         <div className="starcount">⭐ {state.stars}</div>
         <IconBtn label={t('parents')} onClick={onParents}>👨‍👩‍👧</IconBtn>
       </div>

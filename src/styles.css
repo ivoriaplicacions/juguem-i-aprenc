@@ -46,6 +46,13 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .big.green{background:var(--green)} .big.pink{background:var(--pink)}
 .big.purple{background:var(--purple)} .big.orange{background:var(--orange)}
 
+/* ---------- Selector de idioma ---------- */
+.langpick{display:flex;gap:4px;padding:5px;background:var(--card);
+  border-radius:22px;box-shadow:var(--shadow);flex:none}
+.langpick button{min-width:60px;height:54px;border-radius:18px;color:var(--muted);
+  font-weight:800;font-size:18px;letter-spacing:.04em;transition:background .12s,color .12s}
+.langpick button.on{background:var(--blue);color:#fff}
+
 /* ---------- Dedicatoria de la portada ---------- */
 .dedication{display:flex;align-items:center;justify-content:center;gap:10px;
   margin:2px 0 10px;padding:10px 16px;background:var(--card);border-radius:20px;

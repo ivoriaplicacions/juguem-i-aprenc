@@ -45,7 +45,8 @@ export default function App() {
         {nav.screen === 'home' && (
           <Home state={state}
                 onWorld={id => setNav({ screen: 'world', worldId: id })}
-                onParents={() => setNav({ screen: 'parents' })} />
+                onParents={() => setNav({ screen: 'parents' })}
+                onLang={l => setState(s => ({ ...s, lang: l }))} />
         )}
         {nav.screen === 'world' && (
           <World id={nav.worldId} state={state}

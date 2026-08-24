@@ -13,6 +13,11 @@ import contar from './contar'
 import sumar from './sumar'
 import tamanos from './tamanos'
 import clasificar from './clasificar'
+import restar from './restar'
+import masmenos from './masmenos'
+import numerocantidad from './numerocantidad'
+import quefalta from './quefalta'
+import ordenar from './ordenar'
 import vocabulario from './vocabulario'
 import sonidoinicial from './sonidoinicial'
 import letras from './letras'
@@ -37,6 +42,7 @@ export const ACTIVITIES = {
   colores, formas, patrones, puzzle, espacial,
   sombras, colorobjeto, formasobjeto, diferente, colocacolor,
   contar, sumar, tamanos, clasificar,
+  restar, masmenos, numerocantidad, quefalta, ordenar,
   vocabulario, sonidoinicial, letras, silabas,
   emociones, situaciones, calma,
   animales, habitats, rutinas, tiempo,

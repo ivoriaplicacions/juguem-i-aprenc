@@ -46,7 +46,12 @@ export const WORLDS = [
       { id: 'contar',    emoji: '🍎', es: 'Cuenta conmigo',   ca: 'Compta amb mi',    esH: 'Contar del 1 al 10', caH: 'Comptar de l\'1 al 10', areas: ['matematicas'] },
       { id: 'sumar',     emoji: '➕', es: 'Sumas de fruta',   ca: 'Sumes de fruita',  esH: 'Juntar cantidades hasta 5', caH: 'Ajuntar quantitats fins a 5', areas: ['matematicas'] },
       { id: 'tamanos',   emoji: '📏', es: 'Grande o pequeño', ca: 'Gran o petit',     esH: 'Comparar tamaños y cantidades', caH: 'Comparar mides i quantitats', areas: ['matematicas', 'percepcion'] },
-      { id: 'clasificar',emoji: '🗂️', es: 'Cada uno a su sitio', ca: 'Cadascú al seu lloc', esH: 'Clasificar por categorías', caH: 'Classificar per categories', areas: ['matematicas', 'entorno'] }
+      { id: 'clasificar',emoji: '🗂️', es: 'Cada uno a su sitio', ca: 'Cadascú al seu lloc', esH: 'Clasificar por categorías', caH: 'Classificar per categories', areas: ['matematicas', 'entorno'] },
+      { id: 'restar',         emoji: '👋', es: 'Se van volando',      ca: "Se'n van volant",     esH: 'Quitar cantidades hasta 5', caH: 'Treure quantitats fins a 5', areas: ['matematicas'] },
+      { id: 'masmenos',       emoji: '⚖️', es: '¿Dónde hay más?',     ca: 'On n\'hi ha més?',    esH: 'Comparar dos cantidades', caH: 'Comparar dues quantitats', areas: ['matematicas', 'percepcion'] },
+      { id: 'numerocantidad', emoji: '🔗', es: 'El número y su montón',ca: 'El número i el seu munt', esH: 'Unir la cifra con la cantidad', caH: 'Unir la xifra amb la quantitat', areas: ['matematicas'] },
+      { id: 'quefalta',       emoji: '❓', es: '¿Qué número falta?',  ca: 'Quin número falta?',  esH: 'El orden de los números', caH: "L'ordre dels números", areas: ['matematicas', 'memoria'] },
+      { id: 'ordenar',        emoji: '🪜', es: 'La escalera de números', ca: "L'escala de números", esH: 'Ordenar de pequeño a grande', caH: 'Ordenar de petit a gran', areas: ['matematicas', 'percepcion'] }
     ]
   },
   {

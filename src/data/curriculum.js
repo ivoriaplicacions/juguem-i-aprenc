@@ -30,7 +30,12 @@ export const WORLDS = [
       { id: 'formas',   emoji: '🔺', es: 'Formas mágicas',    ca: 'Formes màgiques',     esH: 'Círculo, cuadrado, triángulo…', caH: 'Cercle, quadrat, triangle…', areas: ['percepcion', 'matematicas'] },
       { id: 'patrones', emoji: '🔁', es: 'Sigue la serie',    ca: 'Segueix la sèrie',    esH: 'Descubrir el patrón que se repite', caH: 'Descobrir el patró que es repeteix', areas: ['matematicas', 'percepcion'] },
       { id: 'puzzle',   emoji: '🧩', es: 'Rompecabezas',      ca: 'Trencaclosques',      esH: 'Encajar las piezas', caH: 'Encaixar les peces', areas: ['percepcion', 'motricidad_fina'] },
-      { id: 'espacial', emoji: '🧭', es: 'Arriba y abajo',    ca: 'A dalt i a baix',     esH: 'Dentro, fuera, encima, debajo', caH: 'Dins, fora, sobre, sota', areas: ['percepcion', 'lenguaje'] }
+      { id: 'espacial', emoji: '🧭', es: 'Arriba y abajo',    ca: 'A dalt i a baix',     esH: 'Dentro, fuera, encima, debajo', caH: 'Dins, fora, sobre, sota', areas: ['percepcion', 'lenguaje'] },
+      { id: 'sombras',      emoji: '🌑', es: 'La sombra',           ca: "L'ombra",             esH: 'Reconocer por la silueta', caH: 'Reconèixer per la silueta', areas: ['percepcion', 'memoria'] },
+      { id: 'colorobjeto',  emoji: '🎨', es: '¿De qué color es?',   ca: 'De quin color és?',   esH: 'El color de las cosas', caH: 'El color de les coses', areas: ['percepcion', 'lenguaje'] },
+      { id: 'formasobjeto', emoji: '⭕', es: '¿Qué forma tiene?',   ca: 'Quina forma té?',     esH: 'La figura escondida en las cosas', caH: 'La figura amagada a les coses', areas: ['percepcion', 'matematicas'] },
+      { id: 'diferente',    emoji: '🔍', es: 'Busca el diferente',  ca: 'Busca el diferent',   esH: 'Comparar y encontrar el intruso', caH: 'Comparar i trobar l\'intrús', areas: ['percepcion', 'memoria'] },
+      { id: 'colocacolor',  emoji: '🧺', es: 'Cada color a su caja',ca: 'Cada color a la seva caixa', esH: 'Clasificar por color', caH: 'Classificar per color', areas: ['percepcion', 'matematicas'] }
     ]
   },
   {

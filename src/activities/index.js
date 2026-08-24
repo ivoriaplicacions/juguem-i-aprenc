@@ -4,6 +4,11 @@ import formas from './formas'
 import patrones from './patrones'
 import puzzle from './puzzle'
 import espacial from './espacial'
+import sombras from './sombras'
+import colorobjeto from './colorobjeto'
+import formasobjeto from './formasobjeto'
+import diferente from './diferente'
+import colocacolor from './colocacolor'
 import contar from './contar'
 import sumar from './sumar'
 import tamanos from './tamanos'
@@ -30,6 +35,7 @@ import memoria from './memoria'
 
 export const ACTIVITIES = {
   colores, formas, patrones, puzzle, espacial,
+  sombras, colorobjeto, formasobjeto, diferente, colocacolor,
   contar, sumar, tamanos, clasificar,
   vocabulario, sonidoinicial, letras, silabas,
   emociones, situaciones, calma,

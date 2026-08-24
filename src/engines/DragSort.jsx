@@ -15,8 +15,8 @@ import { pick } from '../lib/rnd'
 
    rounds: [{
      prompt: {es, ca},
-     boxes:  [{ id, label:{es,ca}, art }],
-     items:  [{ id, art, box }]      // box = id de la caja correcta
+     boxes:  [{ id, label:{es,ca}, art }],   // art, o swatch:'#hex' para clasificar por color
+     items:  [{ id, art, box }]              // box = id de la caja correcta
    }]
    ============================================================ */
 export default function DragSort({ rounds, onDone }) {
@@ -101,7 +101,14 @@ export default function DragSort({ rounds, onDone }) {
                 border: '5px dashed var(--line)', display: 'flex', flexDirection: 'column',
                 alignItems: 'center', gap: 6
               }}>
-              <Art name={caja.art} size={64} />
+              {/* La caja se identifica con un dibujo o, si se clasifica
+                  por color, con una mancha de ese color. */}
+              {caja.swatch
+                ? <div style={{
+                    width: 64, height: 64, borderRadius: '50%', background: caja.swatch,
+                    border: '4px solid #fff', boxShadow: 'var(--shadow)'
+                  }} />
+                : <Art name={caja.art} size={64} />}
               <b style={{ fontSize: 18 }}>{tx(caja.label)}</b>
               {/* Lo que ya se ha clasificado bien */}
               <div className="row" style={{ justifyContent: 'center', gap: 8 }}>

@@ -7,6 +7,8 @@ desarrollo infantil de esa etapa.
 Todo funciona **sin conexión**, **sin publicidad**, **sin compras** y **sin
 enviar ni un dato fuera del dispositivo**. El progreso se guarda en local.
 
+▶️ **Jugar ahora: <https://ivoriaplicacions.github.io/juguem-i-aprenc/>**
+
 ---
 
 ## Qué trabaja (y dónde)
@@ -80,6 +82,10 @@ npm run desktop
 El contenido de `dist/` es estático: súbelo a cualquier hosting. Incluye
 manifest e iconos, así que se puede "añadir a la pantalla de inicio" y se abre
 a pantalla completa.
+
+Cada push a `master` lo publica solo en GitHub Pages
+(<https://ivoriaplicacions.github.io/juguem-i-aprenc/>) mediante
+`.github/workflows/deploy.yml`.
 
 ## Estructura
 

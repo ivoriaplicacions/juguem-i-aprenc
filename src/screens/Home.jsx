@@ -24,6 +24,11 @@ export default function Home({ state, onWorld, onParents }) {
         <IconBtn label={t('parents')} onClick={onParents}>👨‍👩‍👧</IconBtn>
       </div>
 
+      <p className="dedication">
+        <span className="heart" aria-hidden="true">💛</span>
+        {t('dedication')}
+      </p>
+
       <div className="worlds">
         {WORLDS.map(w => {
           const d = doneIn(w)

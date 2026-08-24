@@ -46,6 +46,13 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .big.green{background:var(--green)} .big.pink{background:var(--pink)}
 .big.purple{background:var(--purple)} .big.orange{background:var(--orange)}
 
+/* ---------- Dedicatoria de la portada ---------- */
+.dedication{display:flex;align-items:center;justify-content:center;gap:10px;
+  margin:2px 0 10px;padding:10px 16px;background:var(--card);border-radius:20px;
+  box-shadow:var(--shadow);color:var(--muted);font-weight:800;font-size:14px;
+  letter-spacing:.06em;text-align:center;text-wrap:balance}
+.dedication .heart{font-size:18px;line-height:1;flex:none}
+
 /* ---------- Rejilla de mundos ---------- */
 .worlds{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));padding:4px 2px 20px}
 .world{border-radius:var(--radius);padding:20px 16px;color:#fff;text-align:left;

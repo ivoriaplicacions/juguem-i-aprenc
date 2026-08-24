@@ -3,6 +3,8 @@ import { createContext, useContext } from 'react'
 export const STRINGS = {
   es: {
     appName: 'Juguem i Aprenc',
+    // Dedicatoria: va en catalán en las dos lenguas, es una firma, no texto de interfaz.
+    dedication: "JOC PEL NIL FET PER L'AVI SISCO",
     tagline: 'Juega y aprende, 4 y 5 años',
     play: 'Jugar',
     back: 'Atrás',
@@ -38,6 +40,7 @@ export const STRINGS = {
   },
   ca: {
     appName: 'Juguem i Aprenc',
+    dedication: "JOC PEL NIL FET PER L'AVI SISCO",
     tagline: 'Juga i aprèn, 4 i 5 anys',
     play: 'Jugar',
     back: 'Enrere',

@@ -1,7 +1,7 @@
 # Juguem i Aprenc 🎈
 
 Juego educativo **multiplataforma** para niños y niñas de **4 y 5 años**, en
-**castellano y catalán**, con 28 actividades que cubren todas las áreas del
+**castellano y catalán**, con 63 actividades que cubren todas las áreas del
 desarrollo infantil de esa etapa.
 
 Todo funciona **sin conexión**, **sin publicidad**, **sin compras** y **sin
@@ -13,20 +13,23 @@ enviar ni un dato fuera del dispositivo**. El progreso se guarda en local.
 
 ## Qué trabaja (y dónde)
 
-| Área de desarrollo | Actividades |
-|---|---|
-| ✋ Motricidad fina | Rompecabezas, Pizarra mágica, Sigue el camino |
-| 🤸 Motricidad gruesa | Partes del cuerpo, ¡Muévete! |
-| 💬 Lenguaje y vocabulario | ¿Qué es esto?, El arcoíris, Suena igual, ¿Qué tiempo hace?, Arriba y abajo, Partes del cuerpo |
-| 🔤 Prelectura y escritura | Suena igual, Caza la letra, Palmas y sílabas, Sigue el camino |
-| 🔢 Lógica y matemáticas | Cuenta conmigo, Sumas de fruta, Grande o pequeño, Cada uno a su sitio, Sigue la serie, Formas mágicas, ¿Dónde vive? |
-| 👀 Percepción visual y espacio | El arcoíris, Formas mágicas, Sigue la serie, Rompecabezas, Arriba y abajo, Grande o pequeño, Busca la pareja |
-| 🧠 Memoria y atención | Busca la pareja, Repite el ritmo, Sonidos de la granja, ¡Muévete! |
-| 💛 Desarrollo emocional | ¿Cómo se siente?, ¿Qué hacemos?, Respira conmigo |
-| 🤝 Habilidades sociales | ¿Qué hacemos? |
-| 🧼 Autonomía, hábitos y salud | Me cuido solo, Seguro y sano, El día de Nino, Respira conmigo |
-| 🎨 Creatividad y música | Pizarra mágica, Repite el ritmo |
-| 🌍 Conocimiento del entorno | Sonidos de la granja, ¿Dónde vive?, El día de Nino, ¿Qué tiempo hace?, Cada uno a su sitio, Seguro y sano |
+Una misma actividad suele trabajar dos áreas, así que la suma de esta columna
+es mayor que 63.
+
+| Área de desarrollo | Nº | Algunos ejemplos |
+|---|--:|---|
+| ✋ Motricidad fina | 3 | Rompecabezas, Pizarra mágica, Sigue el camino |
+| 🤸 Motricidad gruesa | 4 | ¡Muévete!, ¿Cuántos tengo?, ¿Rápido o lento? |
+| 💬 Lenguaje y vocabulario | 18 | ¿Qué es esto?, Adivina qué es, Lo contrario, ¿Qué está haciendo? |
+| 🔤 Prelectura y escritura | 5 | Suena igual, Caza la letra, ¿Con qué letra empieza? |
+| 🔢 Lógica y matemáticas | 17 | Cuenta conmigo, Se van volando, La escalera de números |
+| 👀 Percepción visual y espacio | 17 | La sombra, Busca el diferente, ¿Qué forma tiene? |
+| 🧠 Memoria y atención | 10 | Busca la pareja, Repite el ritmo, ¿Cuántos golpes suenan? |
+| 💛 Desarrollo emocional | 7 | ¿Cómo se siente el otro?, ¿Qué me ayuda a calmarme? |
+| 🤝 Habilidades sociales | 6 | ¿Qué hacemos?, Las palabras mágicas, ¿Qué necesita? |
+| 🧼 Autonomía, hábitos y salud | 9 | Me cuido solo, Dormir bien, Me he hecho daño |
+| 🎨 Creatividad y música | 6 | Pizarra mágica, La mezcla de colores, ¿Grave o agudo? |
+| 🌍 Conocimiento del entorno | 15 | ¿Dónde vive?, ¿Qué come cada uno?, Las cuatro estaciones |
 
 El **espacio de familias** (candado con una suma, para que no entre el niño)
 muestra el progreso por área: si una barra está corta, es un campo que aún no
@@ -34,8 +37,9 @@ ha explorado, no un suspenso.
 
 ## Los siete mundos
 
-🎨 Colores y Formas · 🔢 Números y Lógica · 📚 Palabras y Letras ·
-💛 Emociones y Amigos · 🌳 Naturaleza y Mundo · 🤸 Mi Cuerpo y Yo · 🎵 Arte y Música
+🎨 Colores y Formas (10) · 🔢 Números y Lógica (9) · 📚 Palabras y Letras (9) ·
+💛 Emociones y Amigos (8) · 🌳 Naturaleza y Mundo (9) · 🤸 Mi Cuerpo y Yo (9) ·
+🎵 Arte y Música (9)
 
 ## Principios de diseño
 
@@ -108,3 +112,8 @@ i18n/           textos de interfaz en castellano y catalán
 3. Añádela a un mundo en `src/data/curriculum.js` indicando qué áreas trabaja.
 
 Aparecerá sola en el menú y en el panel de familias.
+
+`npm run comprobar` valida que todos los dibujos y formas que nombran las
+actividades existan de verdad en `src/art/`; se ejecuta solo antes de cada
+build. Un nombre mal escrito no rompe la compilación: deja un hueco en blanco
+en mitad del juego.

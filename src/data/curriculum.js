@@ -79,7 +79,7 @@ export const WORLDS = [
       { id: 'situaciones',emoji: '🤝', es: '¿Qué hacemos?',    ca: 'Què fem?',        esH: 'Convivencia y empatía', caH: 'Convivència i empatia', areas: ['social', 'emocional'] },
       { id: 'calma',      emoji: '🫧', es: 'Respira conmigo',  ca: 'Respira amb mi',  esH: 'Autorregulación y calma', caH: 'Autoregulació i calma', areas: ['emocional', 'autonomia'] },
       { id: 'caradelotro',    emoji: '🪞', es: '¿Cómo se siente el otro?', ca: 'Com se sent l\'altre?', esH: 'Ponerse en su lugar', caH: 'Posar-se al seu lloc', areas: ['emocional', 'social'] },
-      { id: 'calmarse',       emoji: '🧘', es: '¿Qué me ayuda a calmarme?', ca: 'Què m\'ajuda a calmar-me?', esH: 'Salidas para el enfado', caH: 'Sortides per a l\'enfada', areas: ['emocional', 'autonomia'] },
+      { id: 'calmarse',       emoji: '🧘', es: '¿Qué me ayuda a calmarme?', ca: 'Què m\'ajuda a calmar-me?', esH: 'Salidas para el enfado', caH: 'Sortides per a la ràbia', areas: ['emocional', 'autonomia'] },
       { id: 'necesita',       emoji: '🤲', es: '¿Qué necesita?',   ca: 'Què necessita?',    esH: 'Darse cuenta y cuidar', caH: 'Adonar-se\'n i cuidar', areas: ['emocional', 'social'] },
       { id: 'palabrasmagicas',emoji: '✨', es: 'Las palabras mágicas', ca: 'Les paraules màgiques', esH: 'Hola, gracias, por favor, perdón', caH: 'Hola, gràcies, si us plau, perdó', areas: ['social', 'lenguaje'] },
       { id: 'micuerpoavisa',  emoji: '🫀', es: 'Mi cuerpo me avisa', ca: 'El meu cos m\'avisa', esH: 'Leer las señales del cuerpo', caH: 'Llegir els senyals del cos', areas: ['emocional', 'autonomia'] }
@@ -93,7 +93,12 @@ export const WORLDS = [
       { id: 'animales', emoji: '🐮', es: 'Sonidos de la granja', ca: 'Sons de la granja', esH: 'Discriminación auditiva', caH: 'Discriminació auditiva', areas: ['entorno', 'memoria'] },
       { id: 'habitats', emoji: '🏞️', es: '¿Dónde vive?',        ca: 'On viu?',           esH: 'Animales y su hábitat', caH: 'Animals i el seu hàbitat', areas: ['entorno', 'matematicas'] },
       { id: 'rutinas',  emoji: '🕐', es: 'El día de Nino',      ca: 'El dia del Nino',   esH: 'Secuencias temporales', caH: 'Seqüències temporals', areas: ['entorno', 'autonomia'] },
-      { id: 'tiempo',   emoji: '🌦️', es: '¿Qué tiempo hace?',   ca: 'Quin temps fa?',    esH: 'Meteorología y ropa', caH: 'Meteorologia i roba', areas: ['entorno', 'lenguaje'] }
+      { id: 'tiempo',   emoji: '🌦️', es: '¿Qué tiempo hace?',   ca: 'Quin temps fa?',    esH: 'Meteorología y ropa', caH: 'Meteorologia i roba', areas: ['entorno', 'lenguaje'] },
+      { id: 'quecome',      emoji: '🍽️', es: '¿Qué come cada uno?', ca: 'Què menja cadascú?', esH: 'La dieta de los animales', caH: 'La dieta dels animals', areas: ['entorno', 'lenguaje'] },
+      { id: 'contarpatas',  emoji: '🐾', es: '¿Cuántas patas tiene?', ca: 'Quantes potes té?', esH: 'Clasificar contando', caH: 'Classificar comptant', areas: ['entorno', 'matematicas'] },
+      { id: 'diaynoche',    emoji: '🌗', es: 'De día o de noche',  ca: 'De dia o de nit',   esH: 'El primer reloj', caH: 'El primer rellotge', areas: ['entorno', 'percepcion'] },
+      { id: 'estaciones',   emoji: '🍂', es: 'Las cuatro estaciones', ca: 'Les quatre estacions', esH: 'El año da vueltas', caH: "L'any fa voltes", areas: ['entorno', 'lenguaje'] },
+      { id: 'cuidarelmundo',emoji: '🌱', es: 'Cuidar el mundo',    ca: 'Cuidar el món',     esH: 'Gestos a su alcance', caH: 'Gestos al seu abast', areas: ['entorno', 'social'] }
     ]
   },
   {
@@ -104,7 +109,12 @@ export const WORLDS = [
       { id: 'cuerpo',   emoji: '🧍', es: 'Partes del cuerpo',  ca: 'Parts del cos',    esH: 'Esquema corporal', caH: 'Esquema corporal', areas: ['motricidad_gruesa', 'lenguaje'] },
       { id: 'muevete',  emoji: '💃', es: '¡Muévete!',          ca: 'Mou-te!',          esH: 'Motricidad gruesa y ritmo', caH: 'Motricitat grossa i ritme', areas: ['motricidad_gruesa', 'memoria'] },
       { id: 'higiene',  emoji: '🪥', es: 'Me cuido solo',      ca: 'Em cuido sol',     esH: 'Hábitos e higiene', caH: 'Hàbits i higiene', areas: ['autonomia'] },
-      { id: 'seguridad',emoji: '🚦', es: 'Seguro y sano',      ca: 'Segur i sa',       esH: 'Seguridad y comida sana', caH: 'Seguretat i menjar sa', areas: ['autonomia', 'entorno'] }
+      { id: 'seguridad',emoji: '🚦', es: 'Seguro y sano',      ca: 'Segur i sa',       esH: 'Seguridad y comida sana', caH: 'Seguretat i menjar sa', areas: ['autonomia', 'entorno'] },
+      { id: 'sentidos',     emoji: '👁️', es: 'Los cinco sentidos', ca: 'Els cinc sentits',  esH: 'Para qué sirve cada parte', caH: 'Per a què serveix cada part', areas: ['lenguaje', 'entorno'] },
+      { id: 'cuantastengo', emoji: '🔟', es: '¿Cuántos tengo?',    ca: 'Quants en tinc?',   esH: 'Contar sobre el propio cuerpo', caH: 'Comptar sobre el propi cos', areas: ['matematicas', 'motricidad_gruesa'] },
+      { id: 'curarse',      emoji: '🩹', es: 'Me he hecho daño',   ca: "M'he fet mal",      esH: 'Qué hacer cuando pasa algo', caH: 'Què fer quan passa alguna cosa', areas: ['autonomia', 'social'] },
+      { id: 'descanso',     emoji: '🛏️', es: 'Dormir bien',        ca: 'Dormir bé',         esH: 'La rutina de irse a la cama', caH: 'La rutina d\'anar al llit', areas: ['autonomia'] },
+      { id: 'energia',      emoji: '🍎', es: 'Cada día o de vez en cuando', ca: 'Cada dia o de tant en tant', esH: 'Comer de todo, con medida', caH: 'Menjar de tot, amb mesura', areas: ['autonomia', 'entorno'] }
     ]
   },
   {
@@ -115,7 +125,12 @@ export const WORLDS = [
       { id: 'dibujar', emoji: '🖍️', es: 'Pizarra mágica',   ca: 'Pissarra màgica', esH: 'Expresión libre', caH: 'Expressió lliure', areas: ['creatividad', 'motricidad_fina'] },
       { id: 'trazos',  emoji: '✏️', es: 'Sigue el camino',  ca: 'Segueix el camí', esH: 'Grafomotricidad y preescritura', caH: 'Grafomotricitat i preescriptura', areas: ['motricidad_fina', 'prelectura'] },
       { id: 'ritmo',   emoji: '🥁', es: 'Repite el ritmo',  ca: 'Repeteix el ritme', esH: 'Memoria auditiva y música', caH: 'Memòria auditiva i música', areas: ['creatividad', 'memoria'] },
-      { id: 'memoria', emoji: '🃏', es: 'Busca la pareja',  ca: 'Busca la parella', esH: 'Memoria visual y atención', caH: 'Memòria visual i atenció', areas: ['memoria', 'percepcion'] }
+      { id: 'memoria', emoji: '🃏', es: 'Busca la pareja',  ca: 'Busca la parella', esH: 'Memoria visual y atención', caH: 'Memòria visual i atenció', areas: ['memoria', 'percepcion'] },
+      { id: 'mezclacolores', emoji: '🎨', es: 'La mezcla de colores', ca: 'La barreja de colors', esH: 'De dónde salen los demás', caH: "D'on surten els altres", areas: ['creatividad', 'percepcion'] },
+      { id: 'agudoograve',   emoji: '🎼', es: '¿Grave o agudo?',   ca: 'Greu o agut?',      esH: 'La altura del sonido', caH: "L'altura del so", areas: ['creatividad', 'memoria'] },
+      { id: 'rapidoolento',  emoji: '🐢', es: '¿Rápido o lento?',  ca: 'Ràpid o lent?',     esH: 'El tempo', caH: 'El tempo', areas: ['creatividad', 'motricidad_gruesa'] },
+      { id: 'cuantossuenan', emoji: '👂', es: '¿Cuántos golpes suenan?', ca: 'Quants cops sonen?', esH: 'Contar con los oídos', caH: 'Comptar amb les orelles', areas: ['memoria', 'matematicas'] },
+      { id: 'instrumentos',  emoji: '🎺', es: '¿Cómo se toca?',    ca: 'Com es toca?',      esH: 'Las familias de instrumentos', caH: 'Les famílies d\'instruments', areas: ['creatividad', 'entorno'] }
     ]
   }
 ]

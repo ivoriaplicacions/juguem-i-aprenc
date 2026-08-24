@@ -39,14 +39,29 @@ import animales from './animales'
 import habitats from './habitats'
 import rutinas from './rutinas'
 import tiempo from './tiempo'
+import quecome from './quecome'
+import contarpatas from './contarpatas'
+import diaynoche from './diaynoche'
+import estaciones from './estaciones'
+import cuidarelmundo from './cuidarelmundo'
 import cuerpo from './cuerpo'
 import muevete from './muevete'
 import higiene from './higiene'
 import seguridad from './seguridad'
+import sentidos from './sentidos'
+import cuantastengo from './cuantastengo'
+import curarse from './curarse'
+import descanso from './descanso'
+import energia from './energia'
 import dibujar from './dibujar'
 import trazos from './trazos'
 import ritmo from './ritmo'
 import memoria from './memoria'
+import mezclacolores from './mezclacolores'
+import agudoograve from './agudoograve'
+import rapidoolento from './rapidoolento'
+import cuantossuenan from './cuantossuenan'
+import instrumentos from './instrumentos'
 
 export const ACTIVITIES = {
   colores, formas, patrones, puzzle, espacial,
@@ -58,6 +73,9 @@ export const ACTIVITIES = {
   emociones, situaciones, calma,
   caradelotro, calmarse, necesita, palabrasmagicas, micuerpoavisa,
   animales, habitats, rutinas, tiempo,
+  quecome, contarpatas, diaynoche, estaciones, cuidarelmundo,
   cuerpo, muevete, higiene, seguridad,
-  dibujar, trazos, ritmo, memoria
+  sentidos, cuantastengo, curarse, descanso, energia,
+  dibujar, trazos, ritmo, memoria,
+  mezclacolores, agudoograve, rapidoolento, cuantossuenan, instrumentos
 }

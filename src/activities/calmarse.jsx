@@ -48,7 +48,7 @@ const CASOS = [
   },
   {
     es: 'Ya estás más tranquilo después del enfado. ¿Qué toca ahora?',
-    ca: 'Ja estàs més tranquil després de l\'enfada. Què toca ara?',
+    ca: 'Ja estàs més tranquil després d\'enfadar-te. Què toca ara?',
     ok: { emoji: '💬', es: 'Contar qué me ha pasado', ca: 'Explicar què m\'ha passat' },
     no: [{ emoji: '🤐', es: 'No contarlo nunca', ca: 'No explicar-ho mai' },
          { emoji: '😠', es: 'Volver a enfadarme', ca: 'Tornar-me a enfadar' }]

@@ -19,7 +19,7 @@ npm i -D electron && npm run desktop   # versión de escritorio
 ## Arquitectura
 
 - `src/data/curriculum.js` — **fuente de verdad**: las 12 áreas de desarrollo,
-  los 7 mundos y las 28 actividades. Cada actividad declara qué áreas trabaja;
+  los 7 mundos y las 63 actividades. Cada actividad declara qué áreas trabaja;
   el panel de familias agrega el progreso a partir de aquí.
 - `src/activities/<id>.jsx` — una actividad por fichero. Recibe `{ onDone }` y
   llama a `onDone()` una sola vez al terminar. **No** pinta su pantalla de fin:
@@ -64,6 +64,10 @@ Aparece sola en el menú y en el progreso por área.
 
 ## Verificar antes de dar algo por bueno
 
-`npm run build` y, si tocas actividades, recorrer las 28 en el navegador
-comprobando que no hay errores en consola. Las áreas del panel de familias
-deben seguir cuadrando con `curriculum.js`.
+`npm run build` (que ya ejecuta `npm run comprobar`: valida que todo dibujo o
+forma nombrado por una actividad exista en `src/art/`, porque un nombre mal
+escrito no rompe la compilación, sólo deja un hueco en blanco).
+
+Si tocas actividades, recórrelas en el navegador comprobando que no hay
+errores en consola. Las áreas del panel de familias deben seguir cuadrando
+con `curriculum.js`.
